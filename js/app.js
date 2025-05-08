@@ -7,40 +7,49 @@ function comprar() {
 
 
     if (tipoIngresso == 'pista') {
-        if (totalPista == 0) {
-            mensagemIngressoEsgotado()
-        } else {
-            if (totalPista - quantidadeIngresso < 0) {
-                mensagemIngressoIndisponivel()
+        if (quantidadeIngresso <= 0) { alert('Valor digitado incompatível'); } else {
+            if (totalPista == 0) {
+                mensagemIngressoEsgotado()
             } else {
-                totalPista = totalPista - quantidadeIngresso;
-                campoPista.textContent = totalPista;
+                if (totalPista - quantidadeIngresso < 0) {
+                    mensagemIngressoIndisponivel()
+                } else {
+                    totalPista = totalPista - quantidadeIngresso;
+                    campoPista.textContent = totalPista;
+                    alert('Compra realizada com sucesso')
+                }
             }
         }
     }
 
     if (tipoIngresso == 'superior') {
-        if (totalSuperior == 0) {
-            mensagemIngressoEsgotado()
-        } else {
-            if (totalSuperior - quantidadeIngresso < 0) {
-                mensagemIngressoIndisponivel()
+        if (quantidadeIngresso <= 0) { alert('Valor digitado incompatível'); } else {
+            if (totalSuperior == 0) {
+                mensagemIngressoEsgotado()
             } else {
-                totalSuperior = totalSuperior - quantidadeIngresso;
-                campoSuperior.textContent = totalSuperior;
+                if (totalSuperior - quantidadeIngresso < 0) {
+                    mensagemIngressoIndisponivel()
+                } else {
+                    totalSuperior = totalSuperior - quantidadeIngresso;
+                    campoSuperior.textContent = totalSuperior;
+                    alert('Compra realizada com sucesso')
+                }
             }
         }
     }
 
     if (tipoIngresso == "inferior") {
-        if (totalInferior == 0) {
-            mensagemIngressoEsgotado()
-        } else {
-            if (totalInferior - quantidadeIngresso < 0) {
-                mensagemIngressoIndisponivel()
+        if (quantidadeIngresso <= 0) { alert('Valor digitado incompatível'); } else {
+            if (totalInferior == 0) {
+                mensagemIngressoEsgotado()
             } else {
-                totalInferior = totalInferior - quantidadeIngresso;
-                campoInferior.textContent = totalInferior;
+                if (totalInferior - quantidadeIngresso < 0) {
+                    mensagemIngressoIndisponivel()
+                } else {
+                    totalInferior = totalInferior - quantidadeIngresso;
+                    campoInferior.textContent = totalInferior;
+                    alert('Compra realizada com sucesso')
+                }
             }
         }
     }
